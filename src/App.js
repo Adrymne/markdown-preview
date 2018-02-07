@@ -1,16 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Input from './app/Input';
+import Output from './app/Output';
 import './App.css';
 
-class App extends Component {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { text: '' };
+  }
+
+  handleInput = event => {
+    this.setState({ text: event.target.value });
+  };
+
   render() {
+    const { text } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div id="container">
+        <Input value={text} onChange={this.handleInput} />
+        <Output />
       </div>
     );
   }

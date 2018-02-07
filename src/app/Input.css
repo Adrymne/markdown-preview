@@ -1,0 +1,9 @@
+#markdown-input {
+  resize: none;
+
+  min-height: 95vh;
+  width: 47.5vw;
+  margin: 2vh 1.25vw 2vh 2.5vw;
+
+  font-size: 1.25em;
+}
