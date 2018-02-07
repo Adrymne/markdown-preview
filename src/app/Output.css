@@ -2,6 +2,5 @@
   min-height: 95vh;
   width: 47.5vw;
   margin: 2vh 2.5vw 2vh 1.25vw;
-
-  border: 1px solid black;
+  padding: 3px;
 }
