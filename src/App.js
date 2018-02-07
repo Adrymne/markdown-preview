@@ -1,4 +1,5 @@
 import React from 'react';
+import SourceLink from './app/SourceLink';
 import Input from './app/Input';
 import Output from './app/Output';
 import marked from 'marked';
@@ -23,10 +24,15 @@ class App extends React.Component {
   render() {
     const { text, html } = this.state;
     return (
-      <div id="container">
-        <Input value={text} onChange={this.handleInput} />
-        <Output html={html} />
-      </div>
+      <React.Fragment>
+        <div id="source-url">
+          <SourceLink id="source-url" />
+        </div>
+        <span id="container">
+          <Input value={text} onChange={this.handleInput} />
+          <Output html={html} />
+        </span>
+      </React.Fragment>
     );
   }
 }
